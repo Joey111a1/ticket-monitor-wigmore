@@ -3,7 +3,8 @@ run-name: "Ticket check — ${{ github.event_name }} — run #${{ github.run_num
 
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
