@@ -1,8 +1,9 @@
 name: Wigmore ticket monitor
+run-name: "Ticket check — ${{ github.event_name }} — run #${{ github.run_number }}"
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
 permissions:
