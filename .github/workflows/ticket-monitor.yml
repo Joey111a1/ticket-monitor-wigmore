@@ -1,10 +1,14 @@
 name: Wigmore ticket monitor
-run-name: "Ticket check — ${{ github.event_name }} — run #${{ github.run_number }}"
+run-name: "Ticket check — ${{ github.event.inputs.trigger_source || github.event_name }} — run #${{ github.run_number }}"
 
 on:
-  schedule:
-    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
+    inputs:
+      trigger_source:
+        description: "Who triggered this run"
+        required: false
+        default: "manual"
+        type: string
 
 permissions:
   contents: write
