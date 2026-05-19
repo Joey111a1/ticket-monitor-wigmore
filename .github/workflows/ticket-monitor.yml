@@ -31,7 +31,7 @@ jobs:
 
       - name: Check ticket availability
         env:
-          TICKET_URL: https://www.wigmore-hall.org.uk/whats-on/202606041300
+          TICKET_URL: https://www.wigmore-hall.org.uk/whats-on/202606031930
 
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
